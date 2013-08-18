@@ -1,0 +1,30 @@
+<br />
+<br />
+<div class="p20">
+	<div class="fl w200">
+		<img src="@{model.image}" width="160" height="160" border="0" alt="@{model.name}" />
+	</div>
+	<div class="fl detail-description">
+		<h1>@{model.name}</h1>
+		<div>
+			@{model.description}
+		</div>
+		<div class="cart-added">
+			<span class="icon32 icon-shopping-cart fl mt10"></span>
+			<div class="fl ml10 mt10 b">
+				Item Added to Cart
+			</div>
+			<span class="icon icon-circle-arrow-right fr mt7"></span>
+			<a href="/cart/" class="fr mt10 mr5">Show my shopping cart</a>
+		</div>
+		<br />
+		<button name="buy" class="button">Buy @{model.price} &euro;</button>
+	</div>
+	<div class="cl">&nbsp;</div>
+	<div class="detail-divider">&nbsp;</div>
+
+	<br />
+	<h2>Other products</h2>
+</div>
+
+@{template('products', model.random)}

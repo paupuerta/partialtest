@@ -1,0 +1,75 @@
+@{meta('Create order')}
+
+<div class="p20">
+	<h1>Create order</h1>
+
+	<div class="summary">
+		<div><strong>SUMMARY</strong></div>
+		<br />
+		<div class="form-info">
+			<div>Price</div>
+			<div class="b">@{repository.price} &euro;</div>
+		</div>
+
+		<div class="form-info">
+			<div>Count</div>
+			<div class="b">@{repository.count}</div>
+		</div>
+	</div>
+	<br />
+	<br />
+
+	<form action="#" method="post">
+		
+		<div class="form">
+			<div>Delivery <span class="red">*</span></div>
+			<div>
+				<select name="delivery" class="w100">
+					<option value=""></option>
+					<option value="Fedex">Fedex</option>
+					<option value="UPS">UPS</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="form">
+			<div>First name <span class="red">*</span></div>
+			<div>@{text('firstname', 'w200', 30)}</div>
+		</div>
+
+		<div class="form">
+			<div>Last name <span class="red">*</span></div>
+			<div>@{text('lastname', 'w200', 30)}</div>
+		</div>
+
+		<div class="form">
+			<div>Telephone <span class="red">*</span></div>
+			<div>@{text('telephone', 'w200', 20)}</div>
+		</div>
+		<div class="form">
+			<div>E-mail <span class="red">*</span></div>
+			<div>@{text('email', 'w200', 200)}</div>
+		</div>
+
+		<div class="bb">&nbsp;</div>
+		<br />
+		<br />
+		<div class="form">
+			<div>Address <span class="red">*</span></div>
+			<div>@{textarea('address', 'w300', 300)}</div>
+		</div>
+		<div class="cl">&nbsp;</div>
+		<div class="form mt10 mb10">
+			<div>&nbsp;</div>
+			<div class="b">@{checkbox('isTerms', 'I agree with terms and conditions')}</div>
+		</div>
+		<div class="bt">&nbsp;</div>
+	</form>
+
+	<div id="error"></div>
+
+	<div class="form mb10">
+		<div>&nbsp;</div>
+		<div><button name="order" class="button w150">Create order</button></div>
+	</div>
+</div>

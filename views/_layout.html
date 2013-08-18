@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	@{meta}
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=10" />
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="viewport" content="width=1024, user-scalable=yes" />
+	<meta name="robots" content="all,follow" />
+	<link href="http://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet" type="text/css" />
+	@{css('default.css')}
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	@{js('default.js')}
+	@{favicon('favicon.png')}
+</head>
+<body>
+	<div class="content">
+
+		<div class="header">
+			<a href="/" class="logo" title="E-shop homepage">@{image('logo.png', 320, 100, 'partial.js eshop')}</a>
+			<div class="fr fs14 silver mt10">
+				<div><em>Open source web application framework for node.js.</em></div>
+				<ul class="links w280 mt10">
+					<li><a href="http://partialjs.com" class="b">partial.js / web application framework for node.js</a></li>
+					<li><a href="http://partialjs.com/documentation/">framework documentation</a></li>
+					<li><a href="http://partialjs.com/upload/eshop.zip" class="b">download source code of this e-shop</a></li>
+					<li><a href="http://partialjs.com">@{repository.heap}</a></li>
+				</ul>
+			</div>
+		</div>
+				
+		<div class="menu">
+			@{template('menu', global.category)}
+			<div class="fr">
+				<a href="/cart/" class="cart">
+					<span class="icon icon-shopping-cart"></span>
+					<span class="cart-price">@{repository.price} &euro;</span>
+				</a>
+			</div>
+		</div>
+
+		@{template('sitemap', sitemap, 'sitemap')}
+		@{body}
+
+	</div>
+	<br />
+	<div class="content">
+		<div class="p20 npb">
+			<ul class="links">
+				<li><strong>E-shop</strong></li>
+				<li><a href="http://nodejs.org">nodejs.org</a></li>
+				<li><a href="https://github.com/petersirka/nosql">NoSQL embedded database</a></li>
+			</ul>
+			<ul class="links w280">
+				<li><strong>partial.js</strong></li>
+				<li><a href="http://partialjs.com/documentation/">framework documentation</a></li>
+				<li><a href="http://partialjs.com/upload/eshop.zip" class="b red">download source code of this e-shop</a></li>
+			</ul>
+			<ul class="links">
+				<li><strong>Author</strong></li>
+				<li><a href="http://petersirka.sk">Peter Širka</a></li>
+				<li><a href="http://www.wsd-europe.com">Web Site Design s.r.o.</a></li>
+			</ul>
+			<div class="fl fs11 silver w200">
+				<div>Open source web application framework for <strong>node.js</strong>.</div>
+				<div class="mt7 b">$ npm install partial.js</div>
+			</div>
+			<div class="cl">&nbsp;</div>
+		</div>
+	</div>	
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="p20 npb">
+	@{if url === '/'}
+		@{meta('node.js eshop / partial.js & NoSQL embedded database', 'partial.js web application framework for node.js - eshop example via NoSQL embedded database (download e-shop source)', 'partial.js,nosql,embedded database,node.js,eshop,example,download')}
+		<h1>node.js eshop / partial.js &amp; NoSQL embedded database</h1>
+	@{else}
+		@{meta(repository.title)}
+		@{sitemap(repository.title)}
+		<h1>@{repository.title}</h1>
+	@{endif}
+</div>
+
+@{template('products', model.products)}
+
+<div class="p20 npb npt">
+	@{template('pagination', model.pages, model)}
+</div>

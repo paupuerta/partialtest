@@ -1,0 +1,36 @@
+@{meta('Order #' + model.id)}
+@{sitemap('Order #' + model.id)}
+
+<div class="empty-page">
+	<div class="silver center"><span class="icon100 icon-ok-circle"></span></div>
+	<br />
+	<div class="success">Thank you for your order.</div>
+	<br />
+	<br />
+	<table width="540px" align="center" cellpadding="0" cellspacing="0" border="0">
+		<colgroup>
+			<col class="w150" />
+			<col />
+		</colgroup>
+		<tr>
+			<td class="bg-smoke">Number #</td>
+			<td>@{model.id}</td>
+		</tr>
+		<tr>
+			<td class="bg-smoke">Customer</td>
+			<td>@{model.firstname} @{model.lastname}</td>
+		</tr>
+		<tr>
+			<td class="bg-smoke">Price</td>
+			<td>@{model.price.format(2)} &euro;</td>
+		</tr>
+		<tr>
+			<td class="bg-smoke">Ip</td>
+			<td>@{model.ip}</td>
+		</tr>
+		<tr>
+			<td class="bg-smoke">Date</td>
+			<td>@{model.date.parseDate().format('yyyy-MM-dd HH:mm')}</td>
+		</tr>
+	</table>
+</div>
